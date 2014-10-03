@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	>
+	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/save_step"
+        android:layout_weight="0"
+        android:visibility="gone"
+        >
+        
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/save_step"
+            android:onClick="onClick"
+            android:background="@drawable/btn_step_save"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/handle_name"
+            android:layout_centerInParent="true"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancel_step"
+            android:onClick="onClick"
+            android:background="@drawable/btn_step_cancel"
+            android:layout_alignParentLeft="true"
+            />
+        
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/save_all"
+        android:layout_weight="0" 
+        >
+        
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/save"
+            android:onClick="onClick"
+            android:text="@string/save"
+            android:layout_alignParentRight="true"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancel"
+            android:onClick="onClick"
+            android:text="@string/cancel"
+            />
+        
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1"
+        >
+        
+        <view class="com.jacp.image.view.CropImageView"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:id="@+id/crop_image"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit"
+            android:text="@string/edit"
+            android:onClick="onClick"
+            android:drawableTop="@drawable/btn_edit"
+            />
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tone"
+            android:text="@string/tone"
+            android:onClick="onClick"
+            android:drawableTop="@drawable/btn_color"
+            />
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/frame"
+            android:text="@string/frame"
+            android:onClick="onClick"
+            android:drawableTop="@drawable/btn_frame"
+            />
+        
+    </LinearLayout>
+    
+</LinearLayout>
